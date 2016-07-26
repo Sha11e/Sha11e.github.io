@@ -8,14 +8,14 @@
 			var candy = document.getElementById("candy").value;
 			var result = "";
 			
-			var chosen = (parseInt(candy)/parseInt(evolve) > parseInt(pokemon)) ? parseInt(pokemon) : (parseInt(candy)/parseInt(evolve));
-			result += "Result: You will be able to evolve " + parseInt(chosen)+ " Pokemon! <br";
+			var chosen = (parseInt(candy/evolve) > pokemon) ? pokemon : parseInt((candy/evolve));
+			result += "Result: You will be able to evolve " + chosen + " Pokemon! <br";
 			
 			//Remove used candy and evolved pokemon
-			candy = parseInt(candy) - (parseInt(chosen) * parseInt(evolve));
-			pokemon = parseInt(pokemon) - parseInt(chosen);	
+			candy = candy - (chosen * evolve);
+			pokemon = pokemon - chosen;	
 			
-			if (parseInt(pokemon) > 1 && parseInt((pokemon - 1 + candy)) >= parseInt(evolve)) { //Is there enough candy to evolve a pokemon if we kill all but 1
+			if (pokemon > 1 && (pokemon - 1 + candy) >= evolve) { //Is there enough candy to evolve a pokemon if we kill all but 1
 											   
 			do {
 				//Kill a pokemon to get one candy
@@ -23,12 +23,12 @@
 				candy++;
 				
 				//Check if we have enough evolve 
-				if (parseInt(candy) == parseInt(evolve)) {
+				if (candy == evolve) {
 					pokemon--; //Remove one pokemon, it's now Evolved
 					adEv++; //Increment adEv, we now have one more Additional Evolved Pokemon
 					candy = 0; //Set candy to 0 as we just hit evolve amount of candies and used them to Evolve a Pokemon
 				}
-			} while ((parseInt(pokemon) > 1 && parseInt((parseInt(pokemon) - 1 + parseInt(candy))) >= evolve));
+			} while ((pokemon > 1 && (pokemon - 1 + candy) >= evolve));
 			
 			result += "\nIf you kill " + pKill + " Pokemon you'll be able to evolve " + adEv + " more Pokemon!<br>";
 		}
