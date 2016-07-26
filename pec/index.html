@@ -1,6 +1,6 @@
 <html>
 	<head>
-		<title>Pokémon Evolving Calculator</title>
+		<title>Pokemon Evolving Calculator</title>
 		<script>
 		function calc() {
 			var pokemon = document.getElementById("pokemon").value;
@@ -9,41 +9,41 @@
 			var result = "";
 			
 			var chosen = (parseInt(candy)/parseInt(evolve) > parseInt(pokemon)) ? parseInt(pokemon) : (parseInt(candy)/parseInt(evolve));
-			result += "Result: You will be able to evolve " + parseInt(chosen)+ " Pokémon! <br";
+			result += "Result: You will be able to evolve " + parseInt(chosen)+ " Pokemon! <br";
 			
-			//Remove used candy and evolved pokémon
+			//Remove used candy and evolved pokemon
 			candy = parseInt(candy) - (parseInt(chosen) * parseInt(evolve));
 			pokemon = parseInt(pokemon) - parseInt(chosen);	
 			
 			if (parseInt(pokemon) > 1 && parseInt((pokemon - 1 + candy)) >= parseInt(evolve)) { //Is there enough candy to evolve a pokemon if we kill all but 1
 											   
 			do {
-				//Kill a pokémon to get one candy
+				//Kill a pokemon to get one candy
 				pokemon--; pKill++;
 				candy++;
 				
 				//Check if we have enough evolve 
 				if (parseInt(candy) == parseInt(evolve)) {
 					pokemon--; //Remove one pokemon, it's now Evolved
-					adEv++; //Increment adEv, we now have one more Additional Evolved Pokémon
-					candy = 0; //Set candy to 0 as we just hit evolve amount of candies and used them to Evolve a Pokémon
+					adEv++; //Increment adEv, we now have one more Additional Evolved Pokemon
+					candy = 0; //Set candy to 0 as we just hit evolve amount of candies and used them to Evolve a Pokemon
 				}
 			} while ((parseInt(pokemon) > 1 && parseInt((parseInt(pokemon) - 1 + parseInt(candy))) >= evolve));
 			
-			result += "\nIf you kill " + pKill + " Pokémon you'll be able to evolve " + adEv + " more Pokémon!<br>";
+			result += "\nIf you kill " + pKill + " Pokemon you'll be able to evolve " + adEv + " more Pokemon!<br>";
 		}
 		
-		result += "There is " + pokemon + " Pokémon and " + candy + " candy left!<br>";
+		result += "There is " + pokemon + " Pokemon and " + candy + " candy left!<br>";
 	
 	
-			result += "There is " + pokemon + " pokémon and " + candy + " candy left!";
+			result += "There is " + pokemon + " pokemon and " + candy + " candy left!";
 			document.getElementById("result").innerHTML = result;
 		}
 		</script>
 	</head>
 	
 	<body>
-		How many pokémon do you have? <input type="number" min="1" id="pokemon"> <br>
+		How many pokemon do you have? <input type="number" min="1" id="pokemon"> <br>
 		How much candy does it take to evolve one? <input type="number" min="1" id="evolve"> <br>
 		How much candy do you currently have? <input type="number" min="1" id="candy"> <br>
 		<button type="button" onClick="calc();">Calculate!</button>
