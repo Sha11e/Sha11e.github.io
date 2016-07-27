@@ -1,9 +1,12 @@
 
 body {
-	background-image: url("images/team_mystic_3.png");
-	/*background-repeat: no-repeat;
-	background-size:100%;
-	text-transform: uppercase, underline;
+	background: url("images/team_mystic_3.png") no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover
+	/*background-size:100%;*/
+	/*text-transform: uppercase, underline;*/
 	/*font-weight: bold;*/
 }
 
