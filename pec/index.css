@@ -1,0 +1,12 @@
+
+body {
+	background-image: url("images/team_mystic_3.png");
+	/*background-repeat: no-repeat;
+	background-size:100%;
+	text-transform: uppercase, underline;
+	/*font-weight: bold;*/
+}
+
+.questions, #result {
+	color:#CCCCCC;
+}
