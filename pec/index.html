@@ -10,6 +10,8 @@
 			var evolve = document.getElementById("evolve").value;
 			var candy = document.getElementById("candy").value;
 			var result = "";
+			var pKill = 0;
+			var adEv = 0;
 			
 			var chosen = (parseInt(candy/evolve) > pokemon) ? pokemon : parseInt((candy/evolve));
 			result += "Result:<br>You will be able to evolve " + chosen + " Pokemon! <br>";
