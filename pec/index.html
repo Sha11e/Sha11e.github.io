@@ -1,7 +1,10 @@
 <html>
 	<head>
-	
-	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script>var userip;</script>
+	<script type="text/javascript" src="https://l2.io/ip.js?var=userip">
+
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -19,7 +22,120 @@
 		
 		<link rel="stylesheet" href="index.css">
 		
+
+		
 		<script>
+
+///////////////////////////////////
+/*
+var connection = new ActiveXObject("ADODB.Connection") ;
+
+var connectionstring="Data Source=<server>;Initial Catalog=<catalog>;User ID=<user>;Password=<password>;Provider=SQLOLEDB";
+
+connection.Open(connectionstring);
+var rs = new ActiveXObject("ADODB.Recordset");
+
+rs.Open("SELECT * FROM table", connection);
+rs.MoveFirst
+while(!rs.eof)
+{
+   document.write(rs.fields(1));
+   rs.movenext;
+}
+
+rs.close;
+connection.close;
+*/
+////////////////////////////////		
+		
+		
+		<!-- -->
+		
+  // Initialize Firebase
+  // TODO: Replace with your project's customized code snippet
+//  function ol() {
+  
+  var config = {
+    apiKey: "AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY", //web api key AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY
+    authDomain: "test-project-f64bd.firebaseapp.com", //project id test-project-f64bd
+    databaseURL: "https://test-project-f64bd.firebaseio.com", //database name test-project-f64bd
+    storageBucket: "gs://test-project-f64bd.appspot.com", //<BUCKET> gs://test-project-f64bd
+  };
+  firebase.initializeApp(config);
+  // Get a reference to the database service
+  var database = firebase.database();
+  
+  function DBWrite() {
+
+var today = new Date();
+var dd = today.getDate();
+if (dd<10) dd = '0' + dd;
+var mm = today.getMonth()+1; //January is 0!
+if (mm<10) mm = '0' + mm;
+var yyyy = today.getFullYear();
+var date = yyyy+"-"+mm+"-"+dd;
+var hours = today.getHours();
+if (hours<10) hours = '0' + hours;
+var minutes = today.getMinutes();
+if (minutes<10) minutes = '0' + minutes;
+var seconds = today.getSeconds();
+if (seconds<10) seconds = '0' + seconds;
+var time =  hours + ':' + minutes + ':' + seconds;
+
+  
+var ip = "Dead";
+var address = "Deader";
+
+
+var country_code = "n/a";
+$.getJSON('http://ipinfo.io/' + userip, function(data){
+    country_code = data.country;
+});
+/*
+$.get("http://ipinfo.io", function (response) {
+alert(response.ip);
+	ip = response.ip;
+	address = response.city + ", " + response.region;
+});*/
+  
+  
+ /* $.get("http://ip-api.com/json", function(response) {
+address = response.country;}, "jsonp")*/
+
+	firebase.database().ref(date+'/' + time).set({
+    ip: userip,
+    address: country_code,
+  });
+
+  }
+  
+  
+  
+  /*
+  firebase.auth().signInAnonymously().catch(function(error) {
+  
+  var errorCode = error.code;
+  var errorMessage = error.message;
+  
+});
+firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    
+	alert("User is signed in");
+    var isAnonymous = user.isAnonymous;
+    var uid = user.uid;
+    
+  } else {
+  alert("USer is signed out");
+  }
+});
+  */
+
+//}
+  
+<!-- -->
+
+
 		function calc() {
 			var pokemon = document.getElementById("pokemon").value;
 			var evolve = document.getElementById("evolve").value;
@@ -72,5 +188,8 @@
 		
 		<br><br>
 		<div id="result">Result:</div>
+		
+		<br/><br/>
+		<button type="button" onClick="DBWrite();"> Hit Me Baby For The First Time </button>
 	</body>
 </html>
