@@ -4,6 +4,68 @@
 
 <html>
 	<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+	<script>var userip;</script>
+	<script type="text/javascript" src="https://l2.io/ip.js?var=userip"> </script>
+	
+	<script>
+	var config = {
+    apiKey: "AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY", //web api key AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY
+    authDomain: "test-project-f64bd.firebaseapp.com", //project id test-project-f64bd
+    databaseURL: "https://test-project-f64bd.firebaseio.com", //database name test-project-f64bd
+    storageBucket: "gs://test-project-f64bd.appspot.com", //<BUCKET> gs://test-project-f64bd
+  };
+  firebase.initializeApp(config);
+  // Get a reference to the database service
+  var database = firebase.database();
+  DBWrite('load', 'tvd_safe_comments');
+  
+ function DBWrite(action, page) {
+if (userip=="62.220.178.3") return; 
+var date = getCurrentUTCDate();
+var time =  getCurrentUTCtime();
+
+
+var country_code = "n/a";
+$.getJSON('http://ipinfo.io/' + userip, function(data){
+    country_code = data.country;
+});
+	firebase.database().ref('tvd/'+date+'/' + time).set({
+	d_page: page,
+	c_action: action,
+    b_address: country_code,
+    a_ip: userip,
+  });
+
+  }
+  
+  function getCurrentUTCtime() {
+  var utcToday = new Date();
+  var cetToday = new Date(utcToday.getTime() + 7200000);
+	var today = cetToday;
+	
+	var hours = today.getUTCHours(); if (hours<10) hours = '0' + hours;
+	var minutes = today.getUTCMinutes(); if (minutes<10) minutes = '0' + minutes;
+	var seconds = today.getUTCSeconds(); if (seconds<10) seconds = '0' + seconds;
+	var time = hours + ":" + minutes + ":" + seconds;
+	
+	return time;
+  }
+  
+  function getCurrentUTCDate() {
+  var utcToday = new Date();
+  var cetToday = new Date(utcToday.getTime() + 7200000);
+	var today = cetToday;
+  	var dd = today.getUTCDate(); if (dd<10) dd = '0' + dd;
+	var mm = today.getUTCMonth()+1; if (mm<10) mm = '0' + mm;
+	var yyyy = today.getUTCFullYear();
+	var date = yyyy+"-"+mm+"-"+dd;
+	
+	return date;
+  }
+</script>
+	
 	
 	<script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -41,7 +103,7 @@
 
 	<!-- EPISOE 9 -->
 	<span id="block">
-	<a href="episodes/ep9.png">
+	<a href="episodes/ep9.png" onClick="DBWrite('click', '1x09');">
 		<img src="https://i.ytimg.com/vi/JpQ7FV1G69o/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=2iJwcRfPPA5KDOZpRlW9lhYqb5I
 		"/>
 		<span id="title"> 1x09 - Last updated 03:22, May 10 (CEST) </span>
@@ -55,7 +117,7 @@
 
 	<!-- EPISOE 8 -->
 	<span id="block">
-	<a href="episodes/ep8.png">
+	<a href="episodes/ep8.png" onClick="DBWrite('click', '1x08');">
 		<img src="https://i.ytimg.com/vi/hhq2VwZkvKQ/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=67&sigh=93PLiGX-EtNvSqjRokQ0IHVqRmE
 		"/>
 		<span id="title"> 1x08 - Last updated 14:08 May 10 (CEST) </span>
@@ -69,7 +131,7 @@
 
 	<!-- EPISOE 7 -->
 	<span id="block">
-	<a href="episodes/ep7.png">
+	<a href="episodes/ep7.png" onClick="DBWrite('click', '1x07');">
 		<img src="https://i.ytimg.com/vi/Nj_YOGa9jwM/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=FBpU9zWs3hiJdTbDCpnjwtFCM6g
 		"/>
 		<span id="title"> 1x07 - Last updated 01:03, May 9 (CEST)</span>
@@ -84,7 +146,7 @@
 
 	<!-- EPISOE 6 -->
 	<span id="block">
-	<a href="episodes/ep6.png">
+	<a href="episodes/ep6.png" onClick="DBWrite('click', '1x06');">
 		<img src="https://i.ytimg.com/vi/7KKsOuq93d4/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=CIy1lljJweE2ExqX1sNOTgviqVI
 		"/>
 		<span id="title">1x06 - Last updated 01:00, May 9 (CEST)</span>
@@ -97,7 +159,7 @@
 
 	<!-- EPISOE 5 -->
 	<span id="block">
-	<a href="episodes/ep5.png">
+	<a href="episodes/ep5.png" onClick="DBWrite('click', '1x05');">
 		<img src="https://i.ytimg.com/vi/KS1r0UW_wfo/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=c3EhJqhfdoW0tW6owyI1FCpmL8Q
 		"/>
 		<span id="title">1x05 - Last updated 01:08, May 9 (CEST)</span>
@@ -109,7 +171,7 @@
 
 	<!-- EPISOE 4 -->
 	<span id="block">
-	<a href="episodes/ep4.png">
+	<a href="episodes/ep4.png" onClick="DBWrite('click', '1x04');">
 		<img src="https://i.ytimg.com/vi/DbsBMHIcub8/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=42wv_OHXAyomb3x2xEwjfeWhK5A
 		"/>
 		<span id="title">1x04 - Last updated 02:05, May 9 (CEST)</span>
@@ -120,7 +182,7 @@
 
 	<!-- EPISOE 3 -->
 	<span id="block">
-	<a href="episodes/ep3.png">
+	<a href="episodes/ep3.png" onClick="DBWrite('click', '1x03');">
 		<img src="https://i.ytimg.com/vi/Fs1_J_gGeRQ/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=YwKkYpodbDStLgMhNMSEnkG0eAc
 		"/>
 		<span id="title">1x03 - Last updated 02:05, May 9 (CEST)</span>
@@ -130,7 +192,7 @@
 	
 	<!-- EPISOE 2 -->
 	<span id="block">
-	<a href="episodes/ep2.png">
+	<a href="episodes/ep2.png" onClick="DBWrite('click', '1x02');">
 		<img src="https://i.ytimg.com/vi/VYbeL6XwTk0/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=FlHnAowbwjeDCXeLSakMU8gcsOE
 		"/>
 		<span id="title">1x02 - Last updated 02:05, May 9 (CEST)</span>
@@ -140,7 +202,7 @@
 
 	<!-- EPISODE 1 -->
 	<span id="block">
-	<a href="episodes/ep1.png">
+	<a href="episodes/ep1.png" onClick="DBWrite('click', '1x01');">
 		<img src="https://i.ytimg.com/vi/1dOrFdS83vQ/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=f6MwdajeXQOHWtC2dQCxplXONwY"/>
 		<span id="title">1x01 - Last updated 02:05, May 9 (CEST)</span>
 		</a>
