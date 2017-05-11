@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "omega-wind-167122",
+  "private_key_id": "14cf169f222260d7d3a90f0a89c54d8a1a6fca56",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDITaxRWiu19YMO\nj9EF/S4uTnKgtnOCOjHx3gm0L7hwfM8JFElqKh/NNMPPpnVdPkxfHq1Yf0SXeF0P\nx9pV2pjx5qK8JazOUpo8xR2XI+Y6nVKYPWvMmNacbdqTwYEeR9Nw332oHyzzyDzy\nBWiEfyPaeuQu2yrNaEoFPJYKwYzut7S2wITTMNU7MSNn0bB5/t4TsmFFyV39tyEF\n84TtHSDSLeDCTBgNjtmm3UPOkeKq6v8W9+UVtiED8uIcPuR0mwiAFnRKv+vPSeIQ\nAfZo0/VAD4H7+FrcTCPyWydHxpYzT8adMuq0EYYh7lR0IrULrgA3AGDEFK/qa/QD\n6ej4rj4jAgMBAAECggEAL9su8njivKSd3VrLC+1DnVis1m0BB/ozeKAeHWjRXj7T\nkE3ChJTv6C1VI0WYAOEjig5gSCaQEsh1I5ISPjTuGc2Kz/0IXnsp0p8dxMCU/ygb\nVbhHCyjxDYrJkEfJO5zZjbw333UjXlNXDFPydsWRoV9/KRrADTd/h+TDzGoV6+qX\n/xTimmia4lMph2/ADY0dbkFf7p2ZEUdwXS+yu0uNVlqa8P0RxvNzqfZZhHgApkf3\nPEaN4QXVzRlmY+e/ZH5wuhdCwyzjNf42jFSJvo7cAylpEtW/JZd+ZqUcLwNg0YLj\nrcHsShKDyMrL97tJ9RzxrN5d5BT6yz0qioV4qiDigQKBgQDrZpynad+ZeJs/sRf2\nkp1hvFK57Vv49Th9H6ruIChEUYZlcMyB7LzEHhyvROy9zd7mbiI1NUrX7rNMkwtm\nP8FwqTpYIMB5ZoyUfDIkpDS5Jbz2uOWbdHkbwMqVBklwd4ezgRUx6D5WkTDa5+sI\npsXM9tdr9bddzWZEYvC98HVPwwKBgQDZ1NFnP7y59npcAN2jUf4yF6FXwaCjmsgO\nINBKf2wzvq9fqWSY6EOa0xwD1NxJ8H45OUT1f+WAKlotPNjMMID1g1jPUH1+uOTc\nIslYAxEuZtCP1fnlk3eKXaahKh3EcIvKgfJ13I28UB4WdheqjnPgjt2bAeqhmdWw\nBrtyIEvSIQKBgE7ighiwKBg8DHqZlBgzJb5855Qa8LlLI/T6ScOmzxel4k3YMRBR\nDykBlkc957/rX4kE2z3NcBlQipFcrXNEZkSk0UJ7J0UHkpCn1f3lcS2iceKUL42a\nyIL+ZmTuSGoCBF2pIjspQsqruR2Cnoa1rI91INey7hHnJSBBr79W91kVAoGBAMBq\n6Ire13QhkJZiwWW6UOOo0gG17ZN3b05jl/qmskrHHx1Ogak8SjOiVfXgerLpuGYN\n+6cs0eqz/rJFNHCyS8gTvUhsHl7pLmhyZg7TrsKhWYwlBLjR2d+kuENW87KJhEJf\nJXENYTo+P0WyDVfAvAVZzdFWEQ+s1wDGAaBffPphAoGAEC8VBtjCP52rGMIvrzLk\nkbZAFxm9NuDUFFE+asr89XzM4/Z30F8UWGT1HbAMsPOzFqHCo5pOFeSqYekSFuII\nP7ezCMK54FFT2ISQOZIiq17TzT+MS3FVX0RI1JD+vf3RwuaOJyp+IycRiE9Q5Ssg\nOYI73A9JZaKt++OiNZj6Vns=\n-----END PRIVATE KEY-----\n",
+  "client_email": "tvd-comments-analytics@omega-wind-167122.iam.gserviceaccount.com",
+  "client_id": "100420600429133198003",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/tvd-comments-analytics%40omega-wind-167122.iam.gserviceaccount.com"
+}
