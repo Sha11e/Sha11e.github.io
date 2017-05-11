@@ -31,11 +31,11 @@ var country_code = "n/a";
 $.getJSON('http://ipinfo.io/' + userip, function(data){
     country_code = data.country;
 });
-	firebase.database().ref('tvd/'+date+'/' + time).set({
+	firebase.database().ref('tvd/'+date+'/' + userip).set({
 	d_page: page,
 	c_action: action,
     b_address: country_code,
-    a_ip: userip,
+	a_time: time,
   });
 
   }
