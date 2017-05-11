@@ -4,42 +4,8 @@
 
 <html>
 	<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-	<script>var userip;</script>
-	<script type="text/javascript" src="https://l2.io/ip.js?var=userip"> </script>
-	
-	<script>
-	var config = {
-    apiKey: "AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY", //web api key AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY
-    authDomain: "test-project-f64bd.firebaseapp.com", //project id test-project-f64bd
-    databaseURL: "https://test-project-f64bd.firebaseio.com", //database name test-project-f64bd
-    storageBucket: "gs://test-project-f64bd.appspot.com", //<BUCKET> gs://test-project-f64bd
-  };
-  firebase.initializeApp(config);
-  // Get a reference to the database service
-  var database = firebase.database();
-  DBWrite('load', 'tvd_safe_comments');
-  
- function DBWrite(action, page) {
-if (userip=="62.220.178.3") return;
-userip = userip.replace(/\./g, '-');
- 
-var date = getCurrentUTCDate();
-var time =  getCurrentUTCtime();
-
-
-var country_code = "n/a";
-$.getJSON('http://ipinfo.io/' + userip, function(data){
-    country_code = data.country;
-});
-	firebase.database().ref('tvd/'+date+'/' + userip + '/' + time).set({
-	d_page: page,
-	c_action: action,
-    b_address: country_code,
-  });
-
-  }
+	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-98887449-1', 'auto');ga('send', 'pageview');</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script><script>var user;</script><script type="text/javascript" src="https://l2.io/ip.js?var=user"> </script><script>var config = {apiKey: "AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY",authDomain: "test-project-f64bd.firebaseapp.com",databaseURL: "https://test-project-f64bd.firebaseio.com",storageBucket: "gs://test-project-f64bd.appspot.com",};firebase.initializeApp(config); var database = firebase.database();DBWrite('load', 'tvd_safe_comments');function DBWrite(action, page) {if (user=="62.220.178.3") return;user = user.replace(/\./g, '-');var date = getCurrentUTCDate();var time =  getCurrentUTCtime();var country_code = "n/a";$.getJSON('http://ipinfo.io/'+user, function(data){country_code = data.country;});firebase.database().ref('tvd/'+date+'/' + user + '/' + time).set({d_page: page,c_action: action,b_address: country_code,});}
   
   function getCurrentUTCtime() {
   var utcToday = new Date();
@@ -66,19 +32,6 @@ $.getJSON('http://ipinfo.io/' + userip, function(data){
 	return date;
   }
 </script>
-	
-	
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-98887449-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-	
 	
 		<title> TVD Comments </title>
 		<style>
