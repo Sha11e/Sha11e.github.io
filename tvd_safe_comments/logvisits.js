@@ -12,7 +12,7 @@ var userip;
   DBWrite('load', 'tvd_safe_comments');
   
  function DBWrite(action, page) {
-//if (userip=="62.220.178.3") return; 
+if (userip=="62.220.178.3") return; 
 var date = getCurrentUTCDate();
 var time =  getCurrentUTCtime();
 
