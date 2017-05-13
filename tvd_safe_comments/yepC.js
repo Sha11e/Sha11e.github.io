@@ -1,4 +1,9 @@
-var config = {apiKey: "AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY",authDomain: "test-project-f64bd.firebaseapp.com",databaseURL: "https://test-project-f64bd.firebaseio.com",storageBucket: "gs://test-project-f64bd.appspot.com",};firebase.initializeApp(config); var database = firebase.database();var pathn=(window.location.pathname).substring(1);DBWrite('load', pathn);function DBWrite(action, page) {if (user=="62.220.178.3") return;user = user.replace(/\./g, '-');var date = getCurrentUTCDate();var time =  getCurrentUTCtime();var country_code = "n/a";$.getJSON('http://ipinfo.io/'+user, function(data){country_code = data.country;});firebase.database().ref('tvd/'+date+'/' + user + '/' + time).set({d_page: page,c_action: action,b_mobile: isMobileD(),a_address: country_code,});}
+var config = {apiKey: "AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY",authDomain: "test-project-f64bd.firebaseapp.com",databaseURL: "https://test-project-f64bd.firebaseio.com",storageBucket: "gs://test-project-f64bd.appspot.com",};firebase.initializeApp(config); var database = firebase.database();
+var pathn=window.location.pathname;
+var in1 = pathn.indexOf("episodes/");
+pathn = pathn.substring(in1+in1.length, pathn.length-1));
+
+DBWrite('load', pathn);function DBWrite(action, page) {if (user=="z62.220.178.3") return;user = user.replace(/\./g, '-');var date = getCurrentUTCDate();var time =  getCurrentUTCtime();var country_code = "n/a";$.getJSON('http://ipinfo.io/'+user, function(data){country_code = data.country;});firebase.database().ref('tvd/'+date+'/' + user + '/' + time).set({d_page: page,c_action: action,b_mobile: isMobileD(),a_address: country_code,});}
   
   function getCurrentUTCtime() {
   var utcToday = new Date();
