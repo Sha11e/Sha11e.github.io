@@ -6,7 +6,8 @@ var in1 = pathn.indexOf("episodes");
 var newP = "xd";
 if (in1 != -1) {
 var newP = pathn.substring(in1+9, pathn.length-1);
-//alert("new string: " + newP);}
+//alert("new string: " + newP);
+}
 //}
 
 DBWrite('load', newP);function DBWrite(action, page) {if (user=="z62.220.178.3") return;user = user.replace(/\./g, '-');var date = getCurrentUTCDate();var time =  getCurrentUTCtime();var country_code = "n/a";$.getJSON('http://ipinfo.io/'+user, function(data){country_code = data.country;});firebase.database().ref('TESTtvd/'+date+'/' + user + '/' + time).set({d_page: page,c_action: action,b_mobile: isMobileD(),a_address: country_code,});}
