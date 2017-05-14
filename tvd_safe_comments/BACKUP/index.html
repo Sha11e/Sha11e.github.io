@@ -1,82 +1,18 @@
 <!--
 <b>[comment has been edited] - </b>
+
++
+For new eps:
+	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-98887449-1', 'auto');ga('send', 'pageview');</script>
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script><script>var user;</script><script type="text/javascript" src="https://l2.io/ip.js?var=user"> </script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="../../yepC.js"></script>
+
 -->
 
 <html>
 	<head>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
-	<script>var userip;</script>
-	<script type="text/javascript" src="https://l2.io/ip.js?var=userip"> </script>
 	
-	<script>
-	var config = {
-    apiKey: "AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY", //web api key AIzaSyART9VomfOH4fmZBTXBdjaqnbSt0kgWJXY
-    authDomain: "test-project-f64bd.firebaseapp.com", //project id test-project-f64bd
-    databaseURL: "https://test-project-f64bd.firebaseio.com", //database name test-project-f64bd
-    storageBucket: "gs://test-project-f64bd.appspot.com", //<BUCKET> gs://test-project-f64bd
-  };
-  firebase.initializeApp(config);
-  // Get a reference to the database service
-  var database = firebase.database();
-  DBWrite('load', 'tvd_safe_comments');
-  
- function DBWrite(action, page) {
-if (userip=="62.220.178.3") return; 
-var date = getCurrentUTCDate();
-var time =  getCurrentUTCtime();
-
-
-var country_code = "n/a";
-$.getJSON('http://ipinfo.io/' + userip, function(data){
-    country_code = data.country;
-});
-	firebase.database().ref('tvd/'+date+'/' + userip + '/' + time).set({
-	d_page: page,
-	c_action: action,
-    b_address: country_code,
-  });
-
-  }
-  
-  function getCurrentUTCtime() {
-  var utcToday = new Date();
-  var cetToday = new Date(utcToday.getTime() + 7200000);
-	var today = cetToday;
-	
-	var hours = today.getUTCHours(); if (hours<10) hours = '0' + hours;
-	var minutes = today.getUTCMinutes(); if (minutes<10) minutes = '0' + minutes;
-	var seconds = today.getUTCSeconds(); if (seconds<10) seconds = '0' + seconds;
-	var time = hours + ":" + minutes + ":" + seconds;
-	
-	return time;
-  }
-  
-  function getCurrentUTCDate() {
-  var utcToday = new Date();
-  var cetToday = new Date(utcToday.getTime() + 7200000);
-	var today = cetToday;
-  	var dd = today.getUTCDate(); if (dd<10) dd = '0' + dd;
-	var mm = today.getUTCMonth()+1; if (mm<10) mm = '0' + mm;
-	var yyyy = today.getUTCFullYear();
-	var date = yyyy+"-"+mm+"-"+dd;
-	
-	return date;
-  }
-</script>
-	
-	
-	<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-98887449-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
-	
+	<script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create', 'UA-98887449-1', 'auto');ga('send', 'pageview');</script>
+	<script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script><script>var user;</script><script type="text/javascript" src="https://l2.io/ip.js?var=user"> </script><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="yepC.js"></script>
 	
 		<title> TVD Comments </title>
 		<style>
@@ -100,12 +36,23 @@ $.getJSON('http://ipinfo.io/' + userip, function(data){
 		</style>
 <body>
 
-	<!-- EPISOE 9 -->
+	<!-- EPISOE 10 -->
 	<span id="block">
-	<a href="episodes/ep9.png" onClick="DBWrite('click', '1x09');">
+	<a href="episodes/s01e10/">
 		<img src="https://i.ytimg.com/vi/JpQ7FV1G69o/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=2iJwcRfPPA5KDOZpRlW9lhYqb5I
 		"/>
-		<span id="title"> 1x09 - Last updated 15:46, May 11 (CEST) </span>
+		<span id="title"> 1x10 - Last updated 02:45, May 14 (CEST) </span>
+		</a>
+	</span>
+
+
+
+	<!-- EPISOE 9 -->
+	<span id="block">
+	<a href="episodes/s01e09/">
+		<img src="https://i.ytimg.com/vi/JpQ7FV1G69o/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=2iJwcRfPPA5KDOZpRlW9lhYqb5I
+		"/>
+		<span id="title"> 1x09 - Last updated 02:42, May 14 (CEST) </span>
 		</a>
 	</span>
 
@@ -116,10 +63,10 @@ $.getJSON('http://ipinfo.io/' + userip, function(data){
 
 	<!-- EPISOE 8 -->
 	<span id="block">
-	<a href="episodes/ep8.png" onClick="DBWrite('click', '1x08');">
+	<a href="episodes/s01e08/">
 		<img src="https://i.ytimg.com/vi/hhq2VwZkvKQ/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=67&sigh=93PLiGX-EtNvSqjRokQ0IHVqRmE
 		"/>
-		<span id="title"> 1x08 - Last updated 14:08 May 10 (CEST) </span>
+		<span id="title"> 1x08 - Last updated 02:38 May 14 (CEST) </span>
 		</a>
 	</span>
 
@@ -130,10 +77,10 @@ $.getJSON('http://ipinfo.io/' + userip, function(data){
 
 	<!-- EPISOE 7 -->
 	<span id="block">
-	<a href="episodes/ep7.png" onClick="DBWrite('click', '1x07');">
+	<a href="episodes/s01e07/">
 		<img src="https://i.ytimg.com/vi/Nj_YOGa9jwM/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=FBpU9zWs3hiJdTbDCpnjwtFCM6g
 		"/>
-		<span id="title"> 1x07 - Last updated 01:03, May 9 (CEST)</span>
+		<span id="title"> 1x07 - Last updated 02:35, May 14 (CEST)</span>
 		</a>
 	</span>
 
@@ -145,10 +92,10 @@ $.getJSON('http://ipinfo.io/' + userip, function(data){
 
 	<!-- EPISOE 6 -->
 	<span id="block">
-	<a href="episodes/ep6.png" onClick="DBWrite('click', '1x06');">
+	<a href="episodes/s01e06/">
 		<img src="https://i.ytimg.com/vi/7KKsOuq93d4/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=CIy1lljJweE2ExqX1sNOTgviqVI
 		"/>
-		<span id="title">1x06 - Last updated 01:00, May 9 (CEST)</span>
+		<span id="title">1x06 - Last updated 02:34, May 14 (CEST)</span>
 		</a>
 	</span>
 
@@ -158,10 +105,10 @@ $.getJSON('http://ipinfo.io/' + userip, function(data){
 
 	<!-- EPISOE 5 -->
 	<span id="block">
-	<a href="episodes/ep5.png" onClick="DBWrite('click', '1x05');">
+	<a href="episodes/s01e05/">
 		<img src="https://i.ytimg.com/vi/KS1r0UW_wfo/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=c3EhJqhfdoW0tW6owyI1FCpmL8Q
 		"/>
-		<span id="title">1x05 - Last updated 01:08, May 9 (CEST)</span>
+		<span id="title">1x05 - Last updated 02:32, May 14 (CEST)</span>
 		</a>
 	</span>
 
@@ -170,10 +117,10 @@ $.getJSON('http://ipinfo.io/' + userip, function(data){
 
 	<!-- EPISOE 4 -->
 	<span id="block">
-	<a href="episodes/ep4.png" onClick="DBWrite('click', '1x04');">
+	<a href="episodes/s01e04/">
 		<img src="https://i.ytimg.com/vi/DbsBMHIcub8/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=42wv_OHXAyomb3x2xEwjfeWhK5A
 		"/>
-		<span id="title">1x04 - Last updated 02:05, May 9 (CEST)</span>
+		<span id="title">1x04 - Last updated 02:28, May 14 (CEST)</span>
 		</a>
 	</span>
 
@@ -181,29 +128,29 @@ $.getJSON('http://ipinfo.io/' + userip, function(data){
 
 	<!-- EPISOE 3 -->
 	<span id="block">
-	<a href="episodes/ep3.png" onClick="DBWrite('click', '1x03');">
+	<a href="episodes/s01e03/">
 		<img src="https://i.ytimg.com/vi/Fs1_J_gGeRQ/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=YwKkYpodbDStLgMhNMSEnkG0eAc
 		"/>
-		<span id="title">1x03 - Last updated 02:05, May 9 (CEST)</span>
+		<span id="title">1x03 - Last updated 02:25, May 14 (CEST)</span>
 		</a>
 	</span>
 
 	
 	<!-- EPISOE 2 -->
 	<span id="block">
-	<a href="episodes/ep2.png" onClick="DBWrite('click', '1x02');">
+	<a href="episodes/s01e02/">
 		<img src="https://i.ytimg.com/vi/VYbeL6XwTk0/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=FlHnAowbwjeDCXeLSakMU8gcsOE
 		"/>
-		<span id="title">1x02 - Last updated 02:05, May 9 (CEST)</span>
+		<span id="title">1x02 - Last updated 02:24, May 14 (CEST)</span>
 		</a>
 	</span>
 
 
 	<!-- EPISODE 1 -->
 	<span id="block">
-	<a href="episodes/ep1.png" onClick="DBWrite('click', '1x01');">
+	<a href="episodes/s01e01/">
 		<img src="https://i.ytimg.com/vi/1dOrFdS83vQ/hqdefault.jpg?custom=true&w=196&h=110&stc=true&jpg444=true&jpgq=90&sp=68&sigh=f6MwdajeXQOHWtC2dQCxplXONwY"/>
-		<span id="title">1x01 - Last updated 02:05, May 9 (CEST)</span>
+		<span id="title">1x01 - Last updated 02:18, May 14 (CEST)</span>
 		</a>
 	</span>
 	
